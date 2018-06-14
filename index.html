@@ -16,7 +16,16 @@
     <p style="font-size: 35px">Fuente 35px</p>
     <p style="font-size: 1.75rem">Fuente 35px - 1.75rem</p>
     <p id="resp"></p>
+    <p id="resp2"></p>
   </body>
   <script>
-    document.getElementById("resp").innerHTML = screen.width + ","+ window.innerWidth ; </script>
+    document.getElementById("resp").innerHTML = screen.width + ","+ window.innerWidth ;
+    if(window.innerWidth <600){
+       document.getElementById("resp2").innerHTML = "is mobile";
+    }
+    else{
+       document.getElementById("resp2").innerHTML = "desktop";
+
+    }
+  </script>
 </html>
