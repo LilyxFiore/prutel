@@ -20,7 +20,7 @@
     <p id="resp2"></p>
   </body>
   <script>
-    document.getElementById("resp").innerHTML = screen.width + ","+ window.innerWidth || document.documentElement.clientWidth ;
+    document.getElementById("resp").innerHTML = window.devicePixelRatio;
     if(window.matchMedia('(max-width:800px)')){
 
        document.getElementById("resp2").innerHTML = "is mobile";
@@ -29,5 +29,14 @@
 
        document.getElementById("resp2").innerHTML = "desktop";
     }
+	function checkOr(){
+    if (window.matchMedia("(orientation:portrait)").matches) {
+      alert('portrait ' + window.orientation);
+    } else {
+      alert('landscape '+ window.orientation);
+    }
+}
+
+window.addEventListener("orientationchange", checkOr);
   </script>
 </html>
